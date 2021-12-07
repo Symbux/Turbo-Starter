@@ -12,7 +12,7 @@ const engine = new Engine({
 
 // Register HTTP plugin.
 engine.use(new HttpPlugin({
-	port: parseInt(String(process.env.PORT)) || 3000,
+	port: parseInt(String(process.env.PORT)) || 3005,
 	static: [
 		{ folder: resolve(process.cwd(), '../web/dist'), pathname: '/' },
 		{ folder: resolve(process.cwd(), '../web/dist'), pathname: '*' },

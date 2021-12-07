@@ -88,10 +88,10 @@
   dependencies:
     reflect-metadata "^0.1.13"
 
-"@symbux/turbo@^0.2.8":
-  version "0.2.8"
-  resolved "https://registry.yarnpkg.com/@symbux/turbo/-/turbo-0.2.8.tgz#e9870807cc1631476b4d6c41d6b7ae44357ce9db"
-  integrity sha512-GlLEQDX1Y6t3sQ1iK8cThW9YObENbNsLaB7EeMZfxLgrImd4JEUGxBfiJpoJs1z6ra7JQL6qR9ylkZGC1ZprqA==
+"@symbux/turbo@^0.2.9":
+  version "0.2.9"
+  resolved "https://registry.yarnpkg.com/@symbux/turbo/-/turbo-0.2.9.tgz#a20ca8678796ada77ab712856c580a89c95e419d"
+  integrity sha512-zMXVmxPJmmg0yK1b0P+SCFnFeBSZIkXcocRD12+J+BTgxazu2yFfREgMUWCY3WuDB4ISFSMX/nCNLSFs/hk3+Q==
   dependencies:
     "@prisma/client" "^3.6.0"
     "@symbux/injector" "^1.1.1"

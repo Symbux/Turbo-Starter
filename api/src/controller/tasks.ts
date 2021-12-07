@@ -9,6 +9,13 @@ export class TasksController extends AbstractController {
 
 	@Http.Get('/')
 	public async getTasks(): Promise<Http.Response> {
-		return new Http.Response(200, {});
+		const tasks = await this.prisma.task.findMany();
+		return new Http.Response(200, tasks);
+	}
+
+	@Http.Post('/')
+	public async createTask(context: Http.Context): Promise<Http.Response> {
+		console.log(context);
+		return new Http.Response(204);
 	}
 }

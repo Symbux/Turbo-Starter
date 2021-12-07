@@ -10,7 +10,7 @@
   "dependencies": {
     "@prisma/client": "^3.6.0",
     "@symbux/injector": "^1.1.1",
-    "@symbux/turbo": "^0.2.8",
+    "@symbux/turbo": "^0.2.9",
     "prisma": "^3.6.0",
     "reflect-metadata": "^0.1.13"
   },
@@ -23,7 +23,7 @@
     "typescript": "^4.5.2"
   },
   "scripts": {
-	"start": "ENV=production node dist/index.js",
+    "start": "ENV=production node dist/index.js",
     "dev": "ENV=development node -r ts-node/register src/index.ts",
     "build": "rm -rf dist && tsc",
     "lint": "eslint . --ext .ts"
