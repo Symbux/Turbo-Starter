@@ -1,0 +1,31 @@
+{
+  "name": "@symbux/turbo-starter-api",
+  "version": "0.1.0",
+  "description": "A starter project/boilerplate for the Turbo engine.",
+  "main": "dist/index.js",
+  "repository": "git@github.com:Symbux/Turbo-Starter.git",
+  "author": "Symbux Dev <hello@symbux.dev> (https://symbux.dev)",
+  "license": "Apache-2.0",
+  "private": true,
+  "dependencies": {
+    "@prisma/client": "^3.6.0",
+    "@symbux/injector": "^1.1.1",
+    "@symbux/turbo": "^0.2.8",
+    "prisma": "^3.6.0",
+    "reflect-metadata": "^0.1.13"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.12",
+    "@typescript-eslint/eslint-plugin": "^5.6.0",
+    "@typescript-eslint/parser": "^5.6.0",
+    "eslint": "^8.4.1",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.2"
+  },
+  "scripts": {
+	"start": "ENV=production node dist/index.js",
+    "dev": "ENV=development node -r ts-node/register src/index.ts",
+    "build": "rm -rf dist && tsc",
+    "lint": "eslint . --ext .ts"
+  }
+}

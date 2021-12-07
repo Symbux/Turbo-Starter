@@ -1,2 +1,3 @@
-# Turbo-Starter
-A starter project for the Turbo engine.
+# Turbo Starter Project
+
+This is a starter project for the Turbo engine.
