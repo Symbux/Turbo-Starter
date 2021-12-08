@@ -1,0 +1,15 @@
+{
+  "name": "@symbux/turbo-starter",
+  "version": "0.1.0",
+  "description": "A starter project/boilerplate for the turbo engine using Vue 3.",
+  "repository": "git@github.com:Symbux/Turbo-Starter.git",
+  "author": "Symbux Dev <hello@symbux.dev> (https://symbux.dev)",
+  "license": "Apache-2.0",
+  "private": true,
+  "scripts": {
+    "setup": "cd ./api && yarn install && cd ../web && yarn install",
+    "build": "cd ./api && yarn build && cd ../web && yarn build",
+    "dev": "cd ./api && yarn dev & cd ./web && yarn dev",
+    "start": "cd ./api && NODE_ENV=production yarn start"
+  }
+}
