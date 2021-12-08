@@ -2,7 +2,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 import {
-	faCodeBranch,
+	faTrash, faCheck, faTimes,
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
@@ -10,9 +10,8 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 
 library.add(
-	faCodeBranch,
-	faNpm,
-	faGithub,
+	faTrash, faCheck, faTimes,
+	faNpm, faGithub,
 );
 
 export default FontAwesomeIcon;

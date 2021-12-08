@@ -41,6 +41,10 @@
 		const response = await http.post('/api/tasks', task);
 		if (response.status === 201) {
 			props.reloadTasks();
+			task.title = '';
+			task.content = '';
+			task.due = useDate();
+			task.completed = false;
 		}
 	};
 

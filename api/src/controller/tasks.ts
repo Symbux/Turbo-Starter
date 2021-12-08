@@ -1,4 +1,4 @@
-import { AbstractController, Http, Task } from '@symbux/turbo';
+import { AbstractController, Http } from '@symbux/turbo';
 import { PrismaClient } from '@prisma/client';
 import { Inject } from '@symbux/injector';
 
@@ -25,13 +25,20 @@ export class TasksController extends AbstractController {
 				due: task.due,
 				completed: task.completed,
 			},
-		}).then((value: any) => {
-			console.log(value);
-		}).catch((error: any) => {
-			console.log(error);
 		});
 
 		// Response with success.
 		return new Http.Response(201, { status: true });
+	}
+
+	@Http.Delete('/:id')
+	public async deleteTask(context: Http.Context): Promise<Http.Response> {
+		const taskId = context.getParams().id;
+		await this.prisma.task.delete({
+			where: {
+				id: taskId,
+			},
+		});
+		return new Http.Response(204);
 	}
 }

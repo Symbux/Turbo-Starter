@@ -1,7 +1,7 @@
 <template>
 	<section class="section-container">
 		<div class="section-left">
-			<TaskList :tasks="tasks" />
+			<TaskList :tasks="tasks" :reload-tasks="reload" />
 		</div>
 		<div class="section-right">
 			<TaskForm :reload-tasks="reload" />

@@ -14,6 +14,17 @@ button, a.button, a.btn {
 	&[disabled] {
 		cursor: not-allowed;
 	}
+
+	&.btn-icon {
+		padding: 0;
+		border-radius: 0;
+		border: none;
+		background-color: transparent;
+
+		&:hover:not([disabled]) {
+			background-color: transparent;
+		}
+	}
 	
 	&:hover:not([disabled]) {
 		background-color: darken(#e3e3e3, 10%);
