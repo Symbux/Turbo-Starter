@@ -10,13 +10,18 @@ const engine = new Engine({
 	translations: resolve(process.cwd(), 'translations'),
 });
 
+// Define is production
+const isProduction = process.env.NODE_ENV === 'production';
+
 // Register HTTP plugin.
 engine.use(new HttpPlugin({
 	port: parseInt(String(process.env.PORT)) || 3005,
-	static: [
-		{ folder: resolve(process.cwd(), '../web/dist'), pathname: '/' },
-		{ folder: resolve(process.cwd(), '../web/dist'), pathname: '*' },
-	],
+	static: isProduction ?
+		[
+			{ folder: resolve(process.cwd(), '../web/dist'), pathname: '/' },
+			{ folder: resolve(process.cwd(), '../web/dist'), pathname: '*' },
+		]
+		: undefined,
 	security: {
 		enableHelmet: true,
 	},
