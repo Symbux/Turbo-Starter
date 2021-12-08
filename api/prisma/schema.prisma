@@ -4,6 +4,7 @@
 generator client {
   provider = "prisma-client-js"
   previewFeatures = ["mongoDb"]
+  transactions = false
 }
 
 datasource db {
@@ -12,7 +13,11 @@ datasource db {
 }
 
 model Task {
-  id       String @id @default(dbgenerated()) @map("_id") @db.ObjectId
-  content  String
-  done     Boolean @default(false)
+  id         String @id @default(dbgenerated()) @map("_id") @db.ObjectId
+  title      String
+  content    String
+  due        String
+  completed  Boolean @default(false)
+  created    DateTime @default(now())
+  updated    DateTime @updatedAt
 }

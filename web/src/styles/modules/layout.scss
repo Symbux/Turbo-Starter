@@ -1,0 +1,33 @@
+body {
+	background-color: $background-colour;
+}
+
+#app {
+	min-height: 100vh;
+	display: grid;
+	grid-auto-columns: 1fr;
+	grid-template-columns: 1fr;
+	grid-template-rows: 60px 1fr 40px;
+	gap: 0px 0px;
+	grid-template-areas:
+		"Header"
+		"Content"
+		"Footer";
+	justify-content: space-between;
+	justify-items: stretch;
+	width: 100%;
+}
+
+.header-container {
+	grid-area: Header;
+	background-color: $primary-colour;
+}
+
+.content-container {
+	grid-area: Content;
+}
+
+.footer-container {
+	grid-area: Footer;
+	background-color: $secondary-colour;
+}

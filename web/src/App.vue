@@ -1,19 +1,37 @@
 <template>
-	<img alt="Vue logo" src="./assets/logo.png" />
-	<HelloWorld msg="Hello Vue 3 + TypeScript + Vite + Turbo" />
+	<header class="header-container">
+		<Header />
+	</header>
+
+	<main class="content-container">
+		<router-view v-slot="{ Component }">
+			<template v-if="Component">
+				<transition name="fade">
+					<keep-alive>
+						<suspense>
+							<component :is="Component" />
+							<template #fallback>
+								<Loading />
+							</template>
+						</suspense>
+					</keep-alive>
+				</transition>
+			</template>
+		</router-view>
+	</main>
+
+	<footer class="footer-container">
+		<Footer />
+	</footer>
 </template>
 
 <script setup lang="ts">
-	import HelloWorld from './components/HelloWorld.vue';
+	import Header from './partials/Header.vue';
+	import Footer from './partials/Footer.vue';
+	import Loading from './partials/Loading.vue';
 </script>
 
-<style>
-	#app {
-		font-family: Avenir, Helvetica, Arial, sans-serif;
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
-		text-align: center;
-		color: #2c3e50;
-		margin-top: 60px;
-	}
+<style lang="scss">
+	@import './styles/base/main';
+	@import './styles/modules';
 </style>

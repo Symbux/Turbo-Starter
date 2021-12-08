@@ -1,0 +1,38 @@
+@mixin placeholder {
+	&::-webkit-input-placeholder { @content; }
+	&:-moz-placeholder			 { @content; }
+	&::-moz-placeholder			 { @content; }
+	&:-ms-input-placeholder		 { @content; }
+}
+
+@mixin prefix($property, $value...) {
+	-webkit-#{$property}: $value;
+	-moz-#{$property}: $value;
+	-ms-#{$property}: $value;
+	-o-#{$property}: $value;
+	#{$property}: $value;
+}
+
+@mixin clearfix {
+	zoom: 1;
+	&:before, &:after {
+		content: '';
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+@mixin wordwrap {
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
+	word-break: break-word;
+}
+
+@mixin ellipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}

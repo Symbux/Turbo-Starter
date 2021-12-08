@@ -1,0 +1,114 @@
+input, select, textarea {
+	outline: none;
+	padding: 8px;
+	border-radius: 3px;
+	font-size: 15px;
+	color: $primary-text-colour;
+	border: 1px solid #B9B9B9;
+	background-color: white;
+	color: $primary-text-colour;
+	width: 100%;
+
+	&[disabled] {
+		background-color: rgba(239, 239, 239, 0.3);
+		cursor: not-allowed;
+	}
+	&:invalid {
+		box-shadow: none;
+	}
+}
+
+input[type="checkbox"] {
+	outline: none;
+	@include prefix(appearance, none);
+	background-color: #979797;
+	height: 26px;
+	width: 52px;
+	border-radius: 15px;
+	position: relative;
+	border: none;
+	box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.1);
+	@include prefix(transition, all 0.2s ease-in-out);
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 3px;
+		left: 3px;
+		height: 20px;
+		width: 20px;
+		background-color: white;
+		border-radius: 50%;
+		@include prefix(transition, all 0.2s ease-in-out);
+	}
+
+	&:checked {
+		background-color: $alert-success-colour;
+
+		&:before {
+			content: '';
+			color: rgba(255, 255, 255, 0.6);
+			font-weight: 900;
+			font-size: 0.8rem;
+			text-shadow: 0px 1px 3px darken($alert-success-colour, 15%);
+			position: absolute;
+			left: 10px;
+			top: 7px;
+			@include prefix(transition, all 0.2s ease-in-out);
+		}
+
+		&::after {
+			left: 28px;
+		}
+	}
+
+	&.input-danger {
+		&:checked {
+			background-color: $alert-danger-colour;
+
+			&:before {
+				text-shadow: 0px 1px 3px darken($alert-danger-colour, 15%);
+			}
+		}
+	}
+
+	&.input-notice {
+		&:checked {
+			background-color: $alert-notice-colour;
+
+			&:before {
+				text-shadow: 0px 1px 3px darken($alert-notice-colour, 15%);
+			}
+		}
+	}
+
+	&.input-warning {
+		&:checked {
+			background-color: $alert-warning-colour;
+
+			&:before {
+				text-shadow: 0px 1px 3px darken($alert-warning-colour, 15%);
+			}
+		}
+	}
+
+	&:disabled {
+		background-color: #b9b9b9;
+
+		&:before {
+			text-shadow: 0px 1px 3px darken(#b9b9b9, 15%) !important;
+		}
+	}
+}
+
+textarea {
+	resize: vertical;
+	min-height: 35px;
+	max-height: 250px;
+	height: auto;
+}
+
+select[multiple] {
+	min-height: 120px;
+	max-height: 200px;
+}
