@@ -9,7 +9,12 @@
   "scripts": {
     "setup": "cd ./api && yarn install && cd ../web && yarn install",
     "build": "cd ./api && yarn build && cd ../web && yarn build",
+    "build:api": "cd ./api && yarn build",
+    "build:web": "cd ../web && yarn build",
     "dev": "cd ./api && yarn dev & cd ./web && yarn dev",
-    "start": "cd ./api && NODE_ENV=production yarn start"
+    "dev:api": "cd ./api && yarn dev",
+    "dev:web": "cd ./web && yarn dev",
+    "start": "cd ./api && NODE_ENV=production yarn start",
+    "prisma:gen": "cd ./api && yarn prisma generate"
   }
 }

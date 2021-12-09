@@ -19,32 +19,87 @@ This is a boilerplate/starter project for the Turbo engine.
 
 <br>
 
-## Setup Project
+## Project Setup
 
-* Clone the project into a folder.
-* Run `yarn install` in the `/api` and `/web` folders.
-* Create `/api/.env` file and add your the following. [See .env section](https://www.prisma.io/docs/getting-started/setup-prisma/add-to-existing-project/mongodb/connect-your-database-typescript-mongodb)
+**Clone the repository.**  
 ```
-DATABASE_URL="mongodb+srv://<user>:<pass>@<mongodb-host>/<database>?retryWrites=true&w=majority"
-PORT=3005
-ENV=development
+git clone git@github.com:Symbux/Turbo-Starter.git <folder>
+cd <folder>
 ```
-* Run `yarn prisma generate` in the `/api` folder.
+
+**Setup the project.**  
+_This will install any required dependencies in both the web and api folders._
+```
+yarn setup;
+```
+
+**Copy and fill out the environment file.**  
+_Make sure that the port you use in the .env file is the same as the one in the `vite.config.js` file._
+```
+cp api/.env.example api/.env
+```
+
+**Generate the prisma client.**  
+_This will generate the prisma client with all the types based on the schema._
+```
+yarn prisma:gen
+```
+
+You are now all set, see the next section to start developing.
 
 <br>
 
 ## Developing
 
-* Run `yarn prisma generate` in the `/api` folder everytime you change the prisma schema.
-* Run `yarn dev` in the `/api` folder to run the turbo engine.
-* Run `yarn dev` in the `/web` folder to run the Vite dev server.
-* Navigate to `http://localhost:3000` to see the Vue app.
+**Run the development server.**  
+_This will launch the Vite dev server and the turbo engine in dev mode together._
+```
+yarn dev
+```
+
+**Run the dev server's seperately.**  
+_If you want to launch the dev servers separately, because you want to see the logs better, you can run the following commands in two different terminals._
+```
+yarn dev:api
+yarn dev:web
+```
+
+**Navigate to browser.**  
+_This will be the Vite dev server, proxying all connections to your turbo app._
+```
+http://localhost:3000
+```
 
 <br>
 
 ## Building
 
-* Run `yarn build` in the `/api` folder to build the turbo engine.
-* Run `yarn build` in the `/web` folder to build the Vite app.
-* Go to the `/api` folder and run `yarn start` to run the turbo engine.
-* Navigate to `http://localhost:3005` to see the application, Turbo will automatically serve the built Vue app.
+**Build the project.**  
+_This will build both projects, and the API will host the built Vue files._
+```
+yarn build
+```
+
+**Build only the API.**
+_This will build the API only._
+```
+yarn build:api
+```
+
+**Build only the web.**
+_This will build the web only._
+```
+yarn build:web
+```
+
+<br>
+
+## Launching Production
+
+> Make sure you have built the application first!
+
+**Start the server.**  
+_This will start the Turbo engine which will host the built Vue files._
+```
+yarn start
+```
