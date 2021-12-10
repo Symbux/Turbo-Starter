@@ -1,0 +1,24 @@
+# **************************************************************************
+# * NOT FINISHED
+# **************************************************************************
+
+version: '3'
+
+services:
+  turbo-mongo:
+    container_name: turbo-mongo
+    image: mongo:latest
+    command: --replSet rs0
+    ports:
+      - '27017:27017'
+      - '28017:28017'
+    volumes:
+      - ./data/mongo:/data/db
+  turbo-app:
+    container_name: turbo-app
+    image: node:latest
+    command: yarn start
+    ports:
+      - '3005:3005'
+    volumes:
+      - ./data/app:/data/app
