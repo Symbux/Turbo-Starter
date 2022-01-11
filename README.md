@@ -52,7 +52,7 @@ cd ./db
 docker-compose up -d
 
 # Only run the below once on first launch of the database (the setting is saved after restarts).
-docker-compose exec mongo mongo --eval "rs.initiate({_id: 'rs0', members: [{_id: 0, host: 'mongo:27017'}]});"
+docker-compose exec mongo mongo --eval "rs.initiate({_id: 'rs0', members: [{_id: 0, host: '127.0.0.1:27017'}]});"
 ```
 
 You are now all set, see the next section to start developing.
