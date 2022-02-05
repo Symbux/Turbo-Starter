@@ -8,19 +8,19 @@
   "license": "Apache-2.0",
   "private": true,
   "dependencies": {
-    "@prisma/client": "^3.7.0",
-    "@symbux/injector": "^1.2.0",
-    "@symbux/turbo": "^0.2.11",
-    "prisma": "^3.7.0",
+    "@prisma/client": "^3.9.1",
+    "@symbux/injector": "^1.4.0",
+    "@symbux/turbo": "^0.3.7",
+    "prisma": "^3.9.1",
     "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {
-    "@types/node": "^17.0.8",
-    "@typescript-eslint/eslint-plugin": "^5.9.1",
-    "@typescript-eslint/parser": "^5.9.1",
-    "eslint": "^8.6.0",
+    "@types/node": "^17.0.15",
+    "@typescript-eslint/eslint-plugin": "^5.10.2",
+    "@typescript-eslint/parser": "^5.10.2",
+    "eslint": "^8.8.0",
     "ts-node": "^10.4.0",
-    "typescript": "^4.5.4"
+    "typescript": "^4.5.5"
   },
   "scripts": {
     "start": "ENV=production node dist/index.js",
