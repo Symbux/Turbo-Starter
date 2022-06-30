@@ -1,7 +1,7 @@
 {
-  "name": "@symbux/turbo-starter-api",
-  "version": "0.1.0",
-  "description": "A starter project/boilerplate for the Turbo engine.",
+  "name": "@symbux/turbo-starter",
+  "version": "0.2.0",
+  "description": "A starter project/boilerplate for the Turbo engine with Vite SSR.",
   "main": "dist/index.js",
   "repository": "git@github.com:Symbux/Turbo-Starter.git",
   "author": "Symbux Dev <hello@symbux.dev> (https://symbux.dev)",
