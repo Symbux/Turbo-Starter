@@ -1,8 +1,0 @@
-# Ignore currently installed node_modules to
-# prevent any module collisions so they don't
-# conflict with the newly installed packages
-# when the files are copied over.
-node_modules
-npm-debug.log
-yarn-debug.log
-docs/

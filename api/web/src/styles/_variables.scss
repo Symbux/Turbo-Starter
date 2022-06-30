@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+// Set your brand colors
+$primary: #252A2F;
+$secondary: #3E5C76;
+$tertiary: #A8F9FF;
+$primary-text-colour: #4d4d4d;
+
+// Update Bulma's global variables
+$family-sans-serif: 'Ubuntu', sans-serif;
+$grey-dark: $primary-text-colour;
+$grey-light: $tertiary;
+$link: $primary-text-colour;
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+
+// Update some of Bulma's component variables
+$body-background-color: #EFF0EB;
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;

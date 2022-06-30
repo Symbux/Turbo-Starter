@@ -8,19 +8,30 @@
   "license": "Apache-2.0",
   "private": true,
   "dependencies": {
-    "@prisma/client": "^3.9.1",
+    "@prisma/client": "^4.0.0",
     "@symbux/injector": "^1.4.0",
-    "@symbux/turbo": "^0.3.7",
-    "prisma": "^3.9.1",
-    "reflect-metadata": "^0.1.13"
+    "@symbux/turbo": "^0.6.11",
+    "@symbux/turbo-vite": "^0.1.0",
+    "@vitejs/plugin-vue": "^2.3.3",
+    "bulma": "^0.9.4",
+    "cross-fetch": "^3.1.5",
+    "pinia": "^2.0.14",
+    "prisma": "^4.0.0",
+    "reflect-metadata": "^0.1.13",
+    "sass": "^1.53.0",
+    "uuid": "^8.3.2",
+    "vue": "^3.2.37",
+    "vue-router": "^4.0.16"
   },
   "devDependencies": {
-    "@types/node": "^17.0.15",
-    "@typescript-eslint/eslint-plugin": "^5.10.2",
-    "@typescript-eslint/parser": "^5.10.2",
-    "eslint": "^8.8.0",
-    "ts-node": "^10.4.0",
-    "typescript": "^4.5.5"
+    "@babel/types": "^7.18.7",
+    "@types/node": "^18.0.0",
+    "@types/uuid": "^8.3.4",
+    "@typescript-eslint/eslint-plugin": "^5.30.0",
+    "@typescript-eslint/parser": "^5.30.0",
+    "eslint": "^8.18.0",
+    "ts-node": "^10.8.1",
+    "typescript": "^4.7.4"
   },
   "scripts": {
     "start": "ENV=production node dist/index.js",
